@@ -18,7 +18,7 @@ def read_file(Group8):
 def textCleaner(text):
     
     # Create a list of all special characters to remove
-    special_chars = string.punctuation + string.digits 
+    special_chars = string.punctuation  
     # Iterate through the string and remove all special characters
     clean_text = ''
     for char in text:
@@ -28,9 +28,9 @@ def textCleaner(text):
 
 def WordFrequencyCounter(text):
     
-    words = text.split()# into list
+    words = text.split()#split text into list
     
-    word_count = {}# empty dictionary
+    word_count = {}#we initialize empty dictionary
     for word in words:
         if word in word_count:
             word_count[word] += 1
@@ -42,6 +42,7 @@ def WordFrequencyCounter(text):
     
 
     # To display word and their frequency we use Lists 
+    
     word_freq_list = []
     for word, count in sorted_words:
         word_freq_list.append((word, count))
@@ -65,20 +66,26 @@ def CharacterFrequencyCounter(text):
    #also we use enumerate() method for iterate over a sequence Sorted Characters 
    # Sorted and have access to the index and the value of each element in the sequence.
     for i, (char, count) in enumerate(sorted_chars):
-        if i < 5:
-            print(f'{char}: {count}')
+        if i < 6:
+        
+             if ( i == 0):
+                continue
+             print(f'{char}: {count}')
 
 def main():
     Group8 = 'Group8.txt'
     text = read_file(Group8)
     text = textCleaner(text)
+    
     print(" ")
+    print("To display word and their frequency we use Lists ")
     print("Word frequency = ")
     WordFrequencyCounter(text)
     print("\nCharacter frequency = ")
     CharacterFrequencyCounter(text)
     print("\nStatistical Information From Writen File = ")
     print(" ")
+    
     lines = text.count("\n") + 1
 
     #This code return the length of words from the given input
