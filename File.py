@@ -1,8 +1,10 @@
 import string
 
 def read_file(Group8):
-    #This function does take File as an argument and read file content
-    # also inside the function there are exception hanling it handle exceptions  
+    """
+    This function does take File as an argument and read file content
+     also inside the function there are exception handling it handle exceptions 
+     """
     try:
        with open(Group8, 'r' , encoding="utf-8") as f:
           return f.read()
