@@ -95,9 +95,9 @@ def main():
 
     #This code return the length of Characters from the given input
     characters = len(text)
-    print("|Total lines: = ", lines)
-    print("|Total words: = ", words)
-    print("|Total characters: = ", characters)
+    print("|Total lines is: = ", lines)
+    print("|Total words is: = ", words)
+    print("|Total characters is: = ", characters)
     print(" ")
 
 if __name__ == '__main__':
